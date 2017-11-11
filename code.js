@@ -34,8 +34,13 @@ class Code {
   }
 
   makeMorseCode(){
+    const morseArray = []
     for (const item of this.findMorseCode()){
-      navigator.vibrate(item);
+      for (const element of item){
+        morseArray.push(element)
+      }
     }
+
+    navigator.vibrate(morseArray);
   }
 }
