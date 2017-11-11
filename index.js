@@ -8,6 +8,7 @@ const vibrateMobile = () => {
   document.body.appendChild(button)
 
   button.addEventListener('click', (ev) => {
+    console.log("vibrating morse code");
     navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
   })
 }
