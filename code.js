@@ -7,6 +7,8 @@ class Code {
     this.pause = 30
     this.stop = 200
 
+    console.log(text);
+
     this.morseCode = this.makeMorseCode()
   }
 
