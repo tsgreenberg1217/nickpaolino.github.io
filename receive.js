@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const receive = new Receive
+  const receive = new Receive()
 })

@@ -30,8 +30,6 @@ class App {
       input.value = ""
 
       this.postToAPI(text)
-
-      new Code(text)
     })
   }
 
