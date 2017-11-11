@@ -42,6 +42,7 @@ class Code {
     }
 
     document.body.append(morseArray.toString());
+    document.body.append(this.text.toString());
     navigator.vibrate(morseArray)
   }
 }
