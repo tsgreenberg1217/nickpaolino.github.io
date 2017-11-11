@@ -12,16 +12,30 @@ class Code {
 
   morseRef(){
     return {
-      "s": [this.dot, this.pause, this.dot, this.pause, this.dot, this.pause],
-      "o": [this.dash, this.pause, this.dash, this.pause, this.dash, this.pause]
+      "a": [this.dot, this.pause, this.dash, this.stop],
+      "e": [this.dot, this.stop],
+      "o": [this.dash, this.pause, this.dash, this.pause, this.dash, this.stop],
+      "s": [this.dot, this.pause, this.dot, this.pause, this.dot, this.stop],
+      "t": [this.dash, this.stop]
     }
   }
 
-  makeMorseCode(){
+  findMorseCode(){
+    const textArray = this.text.split("")
+    const morseArray = []
+
     const ref = this.morseRef()
-    console.log(ref["s"]);
+
+    for (var char of textArray){
+      morseArray.push(ref[char])
+    }
+
+    return morseArray
+  }
+
+  makeMorseCode(){
+    for (const item of this.findMorseCode()){
+      navigator.vibrate(item);
+    }
   }
 }
-//
-// // SOS
-// navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
