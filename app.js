@@ -29,7 +29,19 @@ class App {
       const text = input.value
       input.value = ""
 
-      new Code(text)
+      this.postToAPI(text)
+
+      // new Code(text)
     })
+  }
+
+  postToAPI(text){
+    fetch('http://localhost:3000/message', {
+    method: 'POST',
+    body: JSON.stringify({content: text}),
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json'
+    }})
   }
 }
