@@ -1,18 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-  vibrateMobile()
+  navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
+  const app = new App
 })
 
-const vibrateMobile = () => {
-  const button = document.createElement('button')
-  button.innerText = "Vibrate"
-  document.body.appendChild(button)
-
-  button.addEventListener('click', (ev) => {
-    console.log("vibrating morse code");
-    navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
-  })
-}
-
 const morseCodePatterns = () => {
-  // navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
+  navigator.vibrate([100,30,100,30,100,200,200,30,200,30,200,200,100,30,100,30,100]);
 }
