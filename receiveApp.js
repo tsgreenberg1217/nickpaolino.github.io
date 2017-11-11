@@ -4,7 +4,7 @@ class Receive {
   }
 
   fetchLastMessage(){
-    fetch('http://localhost:3000/message')
+    fetch('https://haptic-game.herokuapp.com/messages')
     .then(res => res.json())
     .then(json => new Code(json.slice(-1)[0].content))
   }

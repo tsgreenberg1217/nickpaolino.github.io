@@ -31,12 +31,12 @@ class App {
 
       this.postToAPI(text)
 
-      // new Code(text)
+      new Code(text)
     })
   }
 
   postToAPI(text){
-    fetch('http://localhost:3000/message', {
+    fetch('https://haptic-game.herokuapp.com/messages', {
     method: 'POST',
     body: JSON.stringify({content: text}),
     headers: {
