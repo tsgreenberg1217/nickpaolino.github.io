@@ -12,7 +12,7 @@ class App {
     form.appendChild(input)
 
     const button = document.createElement('button')
-    button.innerText = "Vibrate"
+    button.innerText = "Submit Word"
     button.type = "submit"
     form.appendChild(button)
 

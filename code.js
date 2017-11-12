@@ -15,6 +15,8 @@ class Code {
   morseRef(){
     return {
       "a": [this.dot, this.pause, this.dash, this.stop],
+      "b": [this.dash, this.pause, this.dot, this.pause, this.dot, this.pause, this.dot, this.stop],
+      "b": [this.dash, this.pause, this.dot, this.pause, this.dash, this.pause, this.dot, this.stop],
       "e": [this.dot, this.stop],
       "o": [this.dash, this.pause, this.dash, this.pause, this.dash, this.stop],
       "s": [this.dot, this.pause, this.dot, this.pause, this.dot, this.stop],
