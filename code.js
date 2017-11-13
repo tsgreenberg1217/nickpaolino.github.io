@@ -4,7 +4,7 @@ class Code {
 
     this.dot = 300
     this.dash = 600
-    this.pause = 90
+    this.pause = 60
     this.stop = 750
 
     console.log(text);
