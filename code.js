@@ -5,7 +5,7 @@ class Code {
     this.dot = 200
     this.dash = 400
     this.pause = 60
-    this.stop = 400
+    this.stop = 500
 
     console.log(text);
 
@@ -39,7 +39,7 @@ class Code {
       "w": [this.dot, this.pause, this.dash, this.pause, this.dash, this.stop],
       "x": [this.dash, this.pause, this.dot, this.pause, this.dot, this.pause, this.dash, this.stop],
       "y": [this.dash, this.pause, this.dot, this.pause, this.dash, this.pause, this.dash, this.stop],
-      "z": [this.dash, this.pause, this.dash, this.pause, this.dot, this.pause, this.dot, this.stop],
+      "z": [this.dash, this.pause, this.dash, this.pause, this.dot, this.pause, this.dot, this.stop]
     }
   }
 
