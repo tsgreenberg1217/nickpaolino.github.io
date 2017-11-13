@@ -2,7 +2,7 @@ class Code {
   constructor(text){
     this.text = text
 
-    this.dot = 300
+    this.dot = 200
     this.dash = 600
     this.pause = 60
     this.stop = 750
