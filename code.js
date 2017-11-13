@@ -2,10 +2,10 @@ class Code {
   constructor(text){
     this.text = text
 
-    this.dot = 400
-    this.dash = 800
-    this.pause = 120
-    this.stop = 1000
+    this.dot = 300
+    this.dash = 600
+    this.pause = 90
+    this.stop = 750
 
     console.log(text);
 
