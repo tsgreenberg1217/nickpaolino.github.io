@@ -3,7 +3,7 @@ class Code {
     this.text = text
 
     this.dot = 200
-    this.dash = 1000
+    this.dash = 800
     this.pause = 60
     this.stop = 1500
 
