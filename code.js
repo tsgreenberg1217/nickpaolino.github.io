@@ -5,7 +5,7 @@ class Code {
     this.dot = 200
     this.dash = 1000
     this.pause = 60
-    this.stop = 1000
+    this.stop = 1500
 
     console.log(text);
 
