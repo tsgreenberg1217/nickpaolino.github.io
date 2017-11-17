@@ -197,7 +197,7 @@ class Board {
     body: JSON.stringify({name: username, score:points}),
     headers:{'Content-Type': 'application/json', Accept: 'application/json'}}
 
-    fetch('https://legendofes.herokuapp.com/users',api).then(res => res.json())
+    fetch('https://legendofes.herokuapp.com/users',api).then(res => res.json()).then( ()=>location.reload(true) )
   }
 
   setForm(){
