@@ -95,6 +95,11 @@ class Board {
           this.pauseSwitch = true
           this.gameOver = true
           canvas.style.filter = "brightness(50%)"
+          var audio = document.createElement('audio');
+          audio.className = "audio"
+          audio.src = "./audio/game_over.mp3";
+          document.body.appendChild(audio);
+          audio.play();
           // let title = document.createElement('img')
           // title.src = `img/elements/GameOver.png`
           // title.style.width = '100%'
