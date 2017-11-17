@@ -23,7 +23,7 @@ class Board {
 
   getHighScores(){
     let place = 1
-    fetch('http://legendofes.herokuapp.com/users').then(res => res.json()).then(json =>{
+    fetch('https://legendofes.herokuapp.com/users').then(res => res.json()).then(json =>{
       json.sort(function(a,b){return b.score - a.score}).slice(0,10).forEach((user) =>{
         let scoresDiv = document.getElementById('highScores')
         let div = document.createElement('div')
@@ -197,7 +197,7 @@ class Board {
     body: JSON.stringify({name: username, score:points}),
     headers:{'Content-Type': 'application/json', Accept: 'application/json'}}
 
-    fetch('http://legendofes.herokuapp.com/users',api).then(res => res.json())
+    fetch('https://legendofes.herokuapp.com/users',api).then(res => res.json())
   }
 
   setForm(){
