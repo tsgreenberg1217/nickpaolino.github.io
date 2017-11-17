@@ -2,7 +2,6 @@ let monsterId = 0
 
 class Monster{
   constructor(x,y, board){
-    console.log(this);
     this.id = ++monsterId
     // console.log(this);
     this.board = board
@@ -49,7 +48,6 @@ class Monster{
         clearInterval()
       }
       else{
-        console.log(this.coordinates)
         let randomNumber = Math.floor(Math.random() * 4)
         if (randomNumber === 0) this.moveDown();
         else if (randomNumber === 1) this.moveUp();

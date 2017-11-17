@@ -15,15 +15,15 @@ class Map {
     this.itemCount = 2
 
     // 4 is the limit for the monsters right now
-    this.monsterCount = 2
+    this.monsterCount = 3
 
     this.map = []
 
     this.createTiles()
     // this.boundary = 14
-    this.createPath([7, 14])
     this.createMonsters()
-    this.generateItems()
+    this.createPath([7, 14])
+    // this.generateItems()
 
     console.log(this);
   }
@@ -172,6 +172,13 @@ class Map {
       this.up
     ]
 
+    let counter = 0
+    this.path = []
+    let randomItem = Math.floor(Math.random() * 30)
+    let randomItemTwo = Math.floor(Math.random() * 30)
+    let randomItemThree = Math.floor(Math.random() * 30)
+    let randomItemFour = Math.floor(Math.random() * 30)
+    let randomItemFive = Math.floor(Math.random() * 30)
     let currentTile = [7, 0]
     let path = []
     // console.log(this.boundary);
@@ -179,7 +186,11 @@ class Map {
       // console.log(currentTile)
       let random = Math.floor(Math.random() * 3)
       this.dropTile(currentTile, 0)
+      if (counter === randomItem || counter === randomItemTwo || counter === randomItemThree || counter === randomItemFour || counter === randomItemFive){
+        this.dropTile(currentTile, 2)
+      }
       currentTile = directions[random](currentTile)
+      counter++
     }
   }
 
