@@ -1,5 +1,6 @@
 class Map {
   constructor(board){
+    this.playSound()
     this.height = 15
     this.width = 15
 
@@ -26,6 +27,14 @@ class Map {
     // this.generateItems()
 
     console.log(this);
+  }
+
+  playSound(){
+    var audio = document.createElement('audio');
+    audio.className = "audio"
+    audio.src = "./audio/DOM.mp3";
+    document.body.appendChild(audio);
+    audio.play();
   }
 
   createMonsters(){
