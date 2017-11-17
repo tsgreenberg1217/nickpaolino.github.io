@@ -23,7 +23,7 @@ class Board {
 
   getHighScores(){
     let place = 1
-    fetch('https://legendofes.herokuapp.com/users').then(res => res.json()).then(json =>{
+    fetch('http://legendofes.herokuapp.com/users').then(res => res.json()).then(json =>{
       json.sort(function(a,b){return b.score - a.score}).slice(0,10).forEach((user) =>{
         let scoresDiv = document.getElementById('highScores')
         let div = document.createElement('div')
@@ -62,7 +62,6 @@ class Board {
           else{
             canvas.style.filter = "brightness(100%)"
             this.pauseSwitch = !this.pauseSwitch
-
           }
         }
       }
@@ -75,23 +74,12 @@ class Board {
       existingH3.remove()
     }
     let h3 = document.createElement('h3')
-    // h3.id = 'score'
     h3.id = "score"
-    // h3.innerText += `Points: ${this.score}`
     h3.align = "center"
     document.body.appendChild(h3)
   }
 
-  // enterUser(){
-  //   let form = document.createElement('form')
-  //   let input = document.createElement('input')
-  //   input.className = "text"
-  //   let submit = document.createElement('submit')
-  //   form.appendChild(input)
-  //   form.appendChild(submit)
-  //
-  //   document.body.appendChild(form)
-  // }
+
 
   gameOver(){
     if (this.monsters.length>0 && this.character){
@@ -197,7 +185,7 @@ class Board {
     body: JSON.stringify({name: username, score:points}),
     headers:{'Content-Type': 'application/json', Accept: 'application/json'}}
 
-    fetch('https://legendofes.herokuapp.com/users',api).then(res => res.json()).then( ()=>location.reload(true) )
+    fetch('http://legendofes.herokuapp.com/users',api).then(res => res.json()).then(()=>location.reload(true) )
   }
 
   setForm(){
@@ -221,11 +209,12 @@ class Board {
 
     div.appendChild(f)
     f.addEventListener('submit',(ev) => {
+
       ev.preventDefault()
       let name = i.value
       let score = this.score
       this.postAPI(name,score)
-      i.value = ""
+      // i.value = ""
     })
   }
 

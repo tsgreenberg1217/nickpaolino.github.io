@@ -49,6 +49,7 @@ class Monster{
         clearInterval()
       }
       else{
+        console.log(this.coordinates)
         let randomNumber = Math.floor(Math.random() * 4)
         if (randomNumber === 0) this.moveDown();
         else if (randomNumber === 1) this.moveUp();
@@ -61,15 +62,16 @@ class Monster{
   moveDown(){
     let coord = this.formatCoordinates([this.x + 1, this.y])
     let tile = document.getElementById(coord)
-    if(tile.childElementCount>0 && tile.children[0].id.slice(0,7) === "monster"){
-
-        this.moveMonster()
-    }
-    else if (tile.dataset.item === "open"){
-      this.img = 'img/characters/MONSTER/down/monster_01.png'
-      this.x += 1
-      this.coordinates = [this.x, this.y]
-      this.placeMonster([this.x, this.y])
+    if(tile){
+      if(tile.childElementCount>0 && tile.children[0].id.slice(0,7) === "monster"){
+        this.moveUp()
+      }
+      else if (tile.dataset.item === "open"){
+        this.img = 'img/characters/MONSTER/down/monster_01.png'
+        this.x += 1
+        this.coordinates = [this.x, this.y]
+        this.placeMonster([this.x, this.y])
+      }
     }
   }
   // tile.children[0].id.slice(0,7)
@@ -79,7 +81,7 @@ class Monster{
         if (tile){
           if(tile.childElementCount>0 && tile.children[0].id.slice(0,7) === "monster"){
 
-            this.moveMonster()
+            this.moveRight()
           }
           else if (tile.dataset.item === "open"){
             this.img = 'img/characters/MONSTER/up/monster_01.png'
@@ -95,7 +97,7 @@ class Monster{
         if (tile){
           if(tile.childElementCount>0 && tile.children[0].id.slice(0,7) === "monster"){
 
-            this.moveMonster()
+            this.moveLeft()
           }
           else if (tile.dataset.item === "open"){
             this.img = 'img/characters/MONSTER/right/monster_01.png'
@@ -111,7 +113,7 @@ class Monster{
         if (tile){
           if(tile.childElementCount>0 && tile.children[0].id.slice(0,7) === "monster"){
 
-              this.moveMonster()
+              this.moveDown()
           }
           else if (tile.dataset.item === "open"){
             this.img = 'img/characters/MONSTER/left/monster_01.png'
