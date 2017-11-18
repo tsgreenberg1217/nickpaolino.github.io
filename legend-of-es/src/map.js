@@ -12,7 +12,7 @@ class Map {
     this.constructor.count += 1
 
     this.barrierCount = 40 + (this.constructor.count * 5)
-    console.log("THIS IS THE BARRIER COUNT", this.barrierCount);
+
     this.itemCount = 2
 
     // 4 is the limit for the monsters right now
@@ -26,16 +26,15 @@ class Map {
     this.createPath([7, 14])
     // this.generateItems()
 
-    console.log(this);
   }
-
-  playSound(){
-    var audio = document.createElement('audio');
-    audio.className = "audio"
-    audio.src = "./audio/DOM.mp3";
-    document.body.appendChild(audio);
-    audio.play();
-  }
+  // 
+  // playSound(){
+  //   var audio = document.createElement('audio');
+  //   audio.className = "audio"
+  //   audio.src = "./audio/DOM.mp3";
+  //   document.body.appendChild(audio);
+  //   audio.play();
+  // }
 
   createMonsters(){
     this.monsterCoordinates = []
