@@ -11,7 +11,7 @@ class Map {
 
     this.constructor.count += 1
 
-    this.barrierCount = 40 + (this.constructor.count * 5)
+    this.barrierCount = 10 + (this.constructor.count * 5)
 
     this.itemCount = 2
 
