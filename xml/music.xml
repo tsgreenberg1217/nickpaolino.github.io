@@ -1,4 +1,4 @@
 <Response>
-  <Say voice="alice">Hey there, enjoy this music!</Say>
-  <Play>http://nickpaolino.github.io/xml/theme.mp3</Play>
+  <Say voice="alice">Thanks for trying our documentation. Enjoy!</Say>
+  <Play>http://demo.twilio.com/docs/classic.mp3</Play>
 </Response>
