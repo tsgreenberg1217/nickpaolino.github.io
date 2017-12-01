@@ -1,3 +1,4 @@
 <Response>
+  <Say voice="alice">Hey there, enjoy this music!</Say>
   <Play>http://nickpaolino.github.io/xml/theme.mp3</Play>
 </Response>
